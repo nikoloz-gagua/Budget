@@ -1586,6 +1586,7 @@
   function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
+    modal.style.display = "grid";
     modal.hidden = false;
   }
 
@@ -1593,11 +1594,13 @@
     const modal = document.getElementById(modalId);
     if (!modal) return;
     modal.hidden = true;
+    modal.style.display = "none";
   }
 
   function closeAllModals() {
     document.querySelectorAll(".modal-backdrop").forEach((modal) => {
       modal.hidden = true;
+      modal.style.display = "none";
     });
   }
 
@@ -2329,6 +2332,7 @@
     cacheDom();
     loadState();
     bindEvents();
+    closeAllModals();
     setActivePage(state.ui.activePage || "dashboard");
     renderAll();
   }
