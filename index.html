@@ -1045,7 +1045,7 @@ function renderTxInto(el, txs, showDelete) {
     return;
   }
   const cur = state.settings.currency || '€';
-  const icons = {Housing:'🏠',Food:'🍔',Transport:'🚗',Health:'💊',Entertainment:'🎮',Shopping:'🛍️',Utilities:'💡',Education:'📚',Salary:'💼',Freelance:'💻',Investment:'📈',Gift:'🎁',Other:'📝'};
+  const icons = {Housing:'🏠',Food:'🍔',Transport:'🚗',Health:'💊',Entertainment:'🎮',Shopping:'🛍️',Utilities:'💡',Education:'📚',Salary:'',Freelance:'💻',Investment:'📈',Gift:'🎁',Other:'📝'};
   el.innerHTML = txs.map(t=>`
     <div class="tx-item">
       <div class="tx-icon" style="background:${t.type==='income'?'rgba(0,229,160,0.1)':'rgba(255,85,102,0.1)'}">
