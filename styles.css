@@ -1253,6 +1253,10 @@ button:focus-visible {
   display: none !important;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .modal-card {
   width: min(560px, 100%);
   border-radius: 18px;
